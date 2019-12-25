@@ -3,7 +3,7 @@ import Joi from "joi-browser";
 import Form from "./common/form";
 import {issuePost} from "../services/issueService";
 
-class IssueForm extends Form {
+class IssuePostForm extends Form {
   state = {
     data: { title: "", text: "", createdby: "", assignedto: "", status: "" },
     errors: {}
@@ -58,4 +58,4 @@ class IssueForm extends Form {
   }
 }
 
-export default IssueForm;
+export default IssuePostForm;

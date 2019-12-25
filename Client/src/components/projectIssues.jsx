@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import IssueForm from "./issueForm";
+import IssuePostForm from "./issuePostForm";
 
 
 class ProjectIssues extends Component {
@@ -14,7 +14,7 @@ class ProjectIssues extends Component {
     return (
       <div >
         <h1>Project Tracker</h1>
-        <IssueForm />
+        <IssuePostForm />
       </div>
     );
   }

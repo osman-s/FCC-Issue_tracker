@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import IssueForm from "./issueForm";
+import IssuePostForm from "./issuePostForm";
 // import SubmitIssue from './'
 
 
@@ -15,7 +15,7 @@ class IssueTracker extends Component {
     return (
       <div >
         <h1></h1>
-        <IssueForm />
+        <IssuePostForm />
       </div>
     );
   }
