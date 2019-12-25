@@ -4,8 +4,8 @@ import { Link, NavLink } from "react-router-dom";
 const NavBar = ({ user }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
-        Issue Tracker
+      <Link className="navbar-brand" to="#">
+        <div className="bug"><i className="fas fa-bug bug2"></i> Issue Tracker</div>
       </Link>
       <button
         className="navbar-toggler"

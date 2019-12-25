@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import IssueTracker from "./components/issueTracker";
 import NotFound from "./components/notFound";
 import NavBar from "./components/navBar";
+import ProjectIssues from "./components/projectIssues";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
@@ -19,6 +20,7 @@ class App extends Component {
         <NavBar user={user} />
         <main className="container">
           <Switch>
+            <Route path="/projectissues" component={ProjectIssues} />
             <Route
               path="/issuetracker"
               render={props => (

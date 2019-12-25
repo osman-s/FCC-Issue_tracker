@@ -71,12 +71,13 @@ class Form extends Component {
     );
   }
 
-  renderInput(name, label, type = "text") {
+  renderInput(name, label = "", placeholder="", type = "text") {
     const { data, errors } = this.state;
 
     return (
       <Input
         type={type}
+        placeholder={placeholder}
         name={name}
         value={data[name]}
         label={label}
