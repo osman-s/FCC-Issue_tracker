@@ -29,3 +29,20 @@
 .bug:hover > .bug2 {
   color: rgb(69, 235, 3);
 }
+.checks {
+  padding: 10px;
+}
+.form-space {
+  padding-top: 3vh;
+}
+.check-label {
+  word-wrap: break-word;
+  line-height: 16px;
+  float: left;
+}
+.lefter {
+  text-align: left;
+}
+.tester {
+  background-color: grey;
+}

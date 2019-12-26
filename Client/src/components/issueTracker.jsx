@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import IssuePostForm from "./issuePostForm";
 import IssueUpdateForm from "./issueUpdateForm";
+import IssueDeleteForm from "./issueDeleteForm";
 
 
 class IssueTracker extends Component {
@@ -13,10 +14,11 @@ class IssueTracker extends Component {
   render() {
 
     return (
-      <div >
+      <div>
         <h1></h1>
-        {/* <IssuePostForm /> */}
+        <IssuePostForm />
         <IssueUpdateForm />
+        <IssueDeleteForm />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Select = ({ name, label, options, error, ...rest }) => {
+const Select = ({ name, label, options, type, error, ...rest }) => {
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>
