@@ -13,7 +13,7 @@ class ProjectIssues extends Component {
 
     return (
       <div >
-        <h1>Project Tracker</h1>
+        <h1 className="center"></h1>
         <IssuePostForm />
       </div>
     );

@@ -43,6 +43,9 @@
   display: inline-block;
   vertical-align: middle;
 }
+.center {
+  text-align: center;
+}
 .lefter {
   text-align: left;
 }
