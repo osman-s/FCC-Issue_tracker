@@ -5,6 +5,7 @@ const Checkbox = ({ name, label, options, error, ...rest }) => {
     <div className="form-group">
       {options.map(option => (
         <label htmlFor={name} className="check-label" key={option}>
+          {label}
           <input
             type="checkbox"
             name={name}
@@ -13,7 +14,6 @@ const Checkbox = ({ name, label, options, error, ...rest }) => {
             className="form-control"
             value={option}
           />
-          {label}
         </label>
       ))}
 

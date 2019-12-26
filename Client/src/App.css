@@ -23,8 +23,12 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .bug:hover > .bug2 {
   color: rgb(69, 235, 3);
@@ -36,9 +40,8 @@
   padding-top: 3vh;
 }
 .check-label {
-  word-wrap: break-word;
-  line-height: 16px;
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
 }
 .lefter {
   text-align: left;

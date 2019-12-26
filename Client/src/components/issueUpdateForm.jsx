@@ -61,12 +61,12 @@ class IssueUpdateForm extends Form {
       <div className="form-space">
         <h1 className="left">Update Issue</h1>
         <form onSubmit={this.handleSubmit}>
-          {this.renderInput("_id", "", "Project Id")}
-          {this.renderInput("title", "", "Title  (optional)")}
-          {this.renderInput("text", "", "Description  (optional)")}
-          {this.renderInput("createdby", "", "Created By  (optional)")}
-          {this.renderInput("assignedto", "", "Assigned To (optional)")}
-          {this.renderInput("status", "", "Status (optional)")}
+          {this.renderInput("_id", "", "Project Id", "_idUp")}
+          {this.renderInput("title", "", "Title  (optional)", "titleUp")}
+          {this.renderInput("text", "", "Description  (optional)", "textUp")}
+          {this.renderInput("createdby", "", "Created By  (optional)", "createdbyUp")}
+          {this.renderInput("assignedto", "", "Assigned To (optional)", "assignedtoUp")}
+          {this.renderInput("status", "", "Status (optional)", "statusUp")}
 
           {this.renderCheckbox("state", "Check to close issue.", ["close"])}
 
