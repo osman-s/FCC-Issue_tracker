@@ -5,7 +5,7 @@ const exercises = require("../routes/exercises");
 const error = require("../middleware/error");
 
 module.exports = function(app) {
-  app.use(express.static('public'));
+  app.use(express.static("public"));
   app.use(express.json());
   app.use("/", home);
   app.use("/api", users);

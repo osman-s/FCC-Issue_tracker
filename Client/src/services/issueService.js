@@ -1,7 +1,7 @@
 import http from "./httpService";
 import { apiUrl } from "../config.json";
 
-const apiEndpoint = apiUrl + "/issues";
+const apiEndpoint = apiUrl;
 
 export function issuePost({ title, text, createdby, assignedto, status }) {
   return http.post(apiEndpoint, {
@@ -9,6 +9,6 @@ export function issuePost({ title, text, createdby, assignedto, status }) {
     text: text,
     createdby: createdby,
     assignedto: assignedto,
-    status: status,
+    status: status
   });
 }
