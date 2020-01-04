@@ -50,6 +50,21 @@ function validatePost(post) {
 
   return Joi.validate(post, schema);
 }
+function validateUpdate(post) {
+  const schema = {
+    _id: Joi.objectId(),
+    title: Joi.string().allow(""),
+    text: Joi.string()
+      .min(5)
+      .allow(""),
+    createdby: Joi.string().allow(""),
+    assignedto: Joi.string().allow(""),
+    status: Joi.string().allow("")
+  };
+
+  return Joi.validate(post, schema);
+}
 
 exports.Post = Post;
 exports.validate = validatePost;
+exports.validateUpdate = validateUpdate;
