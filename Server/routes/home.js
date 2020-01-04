@@ -3,9 +3,16 @@ const { Post, validate } = require("../models/posts.model");
 const express = require("express");
 const router = express.Router();
 
+// router.get("/", async (req, res) => {
+//   // const user = await User.find({}).sort({name: 1}).select('name _id');
+//   res.send("hello");
+// });
+
 router.get("/", async (req, res) => {
-  // const user = await User.find({}).sort({name: 1}).select('name _id');
-  res.send("hello");
+  const posts = await Post.find()
+    .select("-__v")
+    .sort("title");
+  res.send(posts);
 });
 
 router.post("/", async (req, res) => {

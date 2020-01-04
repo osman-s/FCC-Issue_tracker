@@ -12,3 +12,7 @@ export function issuePost({ title, text, createdby, assignedto, status }) {
     status: status
   });
 }
+
+export function getPosts() {
+  return http.get(apiEndpoint);
+}

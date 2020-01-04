@@ -16,12 +16,10 @@ const postsSchema = new mongoose.Schema({
     required: true
   },
   assignedto: {
-    type: String,
-    required: true
+    type: String
   },
   status: {
-    type: String,
-    required: true
+    type: String
   },
   createdon: {
     type: Date,
@@ -46,8 +44,8 @@ function validatePost(post) {
       .min(5)
       .required(),
     createdby: Joi.string().required(),
-    assignedto: Joi.string().required(),
-    status: Joi.string().required()
+    assignedto: Joi.string().allow(""),
+    status: Joi.string().allow("")
   };
 
   return Joi.validate(post, schema);

@@ -52,3 +52,26 @@
 .tester {
   background-color: grey;
 }
+.projbox {
+  padding-top: 1vh;
+}
+.project-issues {
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 9px;
+}
+.project-id {
+  font-size: 1rem;
+}
+.project-title {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+.project-text {
+  font-size: 1.5vh;
+  margin-top: -1.5vh;
+  margin-bottom: 0.7vh;
+}
+.project-keys {
+  font-size: 0.7vh;
+}
