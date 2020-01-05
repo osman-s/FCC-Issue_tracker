@@ -59,7 +59,10 @@ function validateUpdate(post) {
       .allow(""),
     createdby: Joi.string().allow(""),
     assignedto: Joi.string().allow(""),
-    status: Joi.string().allow("")
+    status: Joi.string().allow(""),
+    state: Joi.string()
+      .valid("open", "closed")
+      .allow("")
   };
 
   return Joi.validate(post, schema);

@@ -38,8 +38,8 @@ router.post("/", async (req, res) => {
 
 router.put("/", async (req, res) => {
   const posts = req.body;
-  // const { error } = validateUpdate(req.body);
-  // if (error) return res.status(400).send(error.details[0].message);
+  const { error } = validateUpdate(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
 
   const post = await Post.findByIdAndUpdate(
     posts._id,
@@ -52,7 +52,7 @@ router.put("/", async (req, res) => {
       state: posts.state,
       updatedon: Date.now()
     },
-    { new: true }
+    { new: true, strict: true, omitUndefined: true }
   );
 
   if (!post)
@@ -61,19 +61,20 @@ router.put("/", async (req, res) => {
   res.send(req.body);
 });
 
-// router.delete("/:id", [auth, admin], async (req, res) => {
-//   const movie = await Movie.findByIdAndRemove(req.params.id);
+router.delete("/", async (req, res) => {
+  posts = req.body;
+  const post = await Post.findByIdAndRemove(posts._id);
 
-//   if (!movie)
-//     return res.status(404).send("The movie with the given ID was not found.");
+  if (!post)
+    return res.status(404).send("The post with the given ID was not found.");
 
-//   res.send(movie);
-// });
+  res.send(post);
+});
 
 // router.get("/:id", validateObjectId, async (req, res) => {
-//   const movie = await Movie.findById(req.params.id).select("-__v");
+//   const post = await Post.findById(req.params.id).select("-__v");
 
-//   if (!movie)
+//   if (!post)
 //     return res.status(404).send("The movie with the given ID was not found.");
 
 //   res.send(movie);
