@@ -1,7 +1,7 @@
 import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
-import { issuePost } from "../services/issueService";
+import { issueUpdate } from "../services/issueService";
 
 class IssueUpdateForm extends Form {
   state = {
@@ -44,16 +44,16 @@ class IssueUpdateForm extends Form {
 
   doSubmit = async () => {
     console.log(this.state.data);
-    // try {
-    //   const response = await issuePost(this.state.data);
-    //   window.location = "/";
-    // } catch (ex) {
-    //   if (ex.response && ex.response.status === 400) {
-    //     const errors = { ...this.state.errors };
-    //     errors.username = ex.response.data;
-    //     this.setState({ errors });
-    //   }
-    // }
+    try {
+      const response = await issueUpdate(this.state.data);
+      window.location = "/projectissues";
+    } catch (ex) {
+      if (ex.response && ex.response.status === 400) {
+        const errors = { ...this.state.errors };
+        errors.username = ex.response.data;
+        this.setState({ errors });
+      }
+    }
   };
 
   render() {
@@ -64,11 +64,21 @@ class IssueUpdateForm extends Form {
           {this.renderInput("_id", "", "Project Id", "_idUp")}
           {this.renderInput("title", "", "Title  (optional)", "titleUp")}
           {this.renderInput("text", "", "Description  (optional)", "textUp")}
-          {this.renderInput("createdby", "", "Created By  (optional)", "createdbyUp")}
-          {this.renderInput("assignedto", "", "Assigned To (optional)", "assignedtoUp")}
+          {this.renderInput(
+            "createdby",
+            "",
+            "Created By  (optional)",
+            "createdbyUp"
+          )}
+          {this.renderInput(
+            "assignedto",
+            "",
+            "Assigned To (optional)",
+            "assignedtoUp"
+          )}
           {this.renderInput("status", "", "Status (optional)", "statusUp")}
 
-          {this.renderCheckbox("state", "Check to close issue.", ["close"])}
+          {this.renderCheckbox("state", "Check to close issue.", ["closed"])}
 
           {this.renderButton("Submit")}
         </form>

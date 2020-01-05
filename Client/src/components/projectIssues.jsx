@@ -50,7 +50,7 @@ class ProjectIssues extends Component {
               </div>
               <div className="project-keys">
                 <b>Created on:</b> {post.createdon}
-                {post.updateddon && (
+                {post.updatedon !== post.createdon && (
                   <span>
                     {" "}
                     <b>Last Updated: </b>

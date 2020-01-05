@@ -1,7 +1,7 @@
 import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
-import { issuePost } from "../services/issueService";
+import { issueDelete } from "../services/issueService";
 
 class IssueDeleteForm extends Form {
   state = {
@@ -18,17 +18,17 @@ class IssueDeleteForm extends Form {
   };
 
   doSubmit = async () => {
-    console.log(this.state.data)
-    // try {
-    //   const response = await issuePost(this.state.data);
-    //   window.location = "/";
-    // } catch (ex) {
-    //   if (ex.response && ex.response.status === 400) {
-    //     const errors = { ...this.state.errors };
-    //     errors.username = ex.response.data;
-    //     this.setState({ errors });
-    //   }
-    // }
+    console.log(this.state.data);
+    try {
+      const response = await issueDelete(this.state.data);
+      window.location = "/projectissues";
+    } catch (ex) {
+      if (ex.response && ex.response.status === 400) {
+        const errors = { ...this.state.errors };
+        errors.username = ex.response.data;
+        this.setState({ errors });
+      }
+    }
   };
 
   render() {
