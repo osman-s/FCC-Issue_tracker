@@ -80,7 +80,7 @@ class IssueUpdateForm extends Form {
 
           {this.renderCheckbox("state", "Check to close issue.", ["closed"])}
 
-          {this.renderButton("Submit")}
+          {this.renderButton("Update")}
         </form>
       </div>
     );

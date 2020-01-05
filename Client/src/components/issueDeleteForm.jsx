@@ -37,7 +37,7 @@ class IssueDeleteForm extends Form {
         <h1 className="lefter">Delete Issue</h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("_id", "", "Project Id")}
-          {this.renderButton("Delete Issue")}
+          {this.renderButton("Delete")}
         </form>
       </div>
     );
