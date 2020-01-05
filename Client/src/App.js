@@ -18,7 +18,7 @@ class App extends Component {
       <React.Fragment>
         <ToastContainer />
         <NavBar user={user} />
-        <main className="container">
+        <main className="">
           <Switch>
             <Route path="/projectissues" component={ProjectIssues} />
             <Route

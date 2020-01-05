@@ -37,6 +37,7 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/", async (req, res) => {
+  console.log(req.body)
   const posts = req.body;
   const { error } = validateUpdate(req.body);
   if (error) return res.status(400).send(error.details[0].message);

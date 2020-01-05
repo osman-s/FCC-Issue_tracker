@@ -75,3 +75,27 @@
 .project-keys {
   font-size: 0.7vh;
 }
+.issue-resdiv {
+  padding: .5vh;
+}
+.issue-resolver {
+  margin-left: 1vw;
+  padding: .3vh;
+  border-radius: 10%;
+}
+.issue-resolver:hover {
+  background-color: rgb(160, 255, 255);
+}
+.forms-c {
+  /* text-align: center; */
+  margin-left: 1vw;
+  display: flex;
+  justify-content: flex-start;
+}
+.widther {
+  width: 60vw;
+}
+.padder {
+  padding: 2vh;
+  text-align: center;
+}

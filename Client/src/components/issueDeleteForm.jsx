@@ -33,12 +33,15 @@ class IssueDeleteForm extends Form {
 
   render() {
     return (
-      <div className="form-space">
-        <h1 className="lefter">Delete Issue</h1>
+      <div className="form-space forms-c">
+        <div className="widther">
+         <h1 className="lefter">Delete Issue</h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("_id", "", "Project Id")}
           {this.renderButton("Delete")}
-        </form>
+        </form> 
+        </div>
+        
       </div>
     );
   }

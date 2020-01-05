@@ -44,16 +44,19 @@ class IssuePostForm extends Form {
 
   render() {
     return (
-      <div>
-        <h1>Post Issue</h1>
-        <form onSubmit={this.handleSubmit}>
+      <div className="forms-c">
+        <div>
+         <h1>Post Issue</h1>
+        <form onSubmit={this.handleSubmit} className="widther">
           {this.renderInput("title", "", "Title")}
           {this.renderInput("text", "", "Description")}
           {this.renderInput("createdby", "", "Created By")}
           {this.renderInput("assignedto", "", "Assigned To (optional)")}
           {this.renderInput("status", "", "Status (optional)")}
           {this.renderButton("Submit")}
-        </form>
+        </form> 
+        </div>
+        
       </div>
     );
   }

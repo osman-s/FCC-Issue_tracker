@@ -58,30 +58,32 @@ class IssueUpdateForm extends Form {
 
   render() {
     return (
-      <div className="form-space">
-        <h1 className="left">Update Issue</h1>
-        <form onSubmit={this.handleSubmit}>
-          {this.renderInput("_id", "", "Project Id", "_idUp")}
-          {this.renderInput("title", "", "Title  (optional)", "titleUp")}
-          {this.renderInput("text", "", "Description  (optional)", "textUp")}
-          {this.renderInput(
-            "createdby",
-            "",
-            "Created By  (optional)",
-            "createdbyUp"
-          )}
-          {this.renderInput(
-            "assignedto",
-            "",
-            "Assigned To (optional)",
-            "assignedtoUp"
-          )}
-          {this.renderInput("status", "", "Status (optional)", "statusUp")}
+      <div className="form-space forms-c">
+        <div>
+          <h1 className="left">Update Issue</h1>
+          <form onSubmit={this.handleSubmit} className="widther">
+            {this.renderInput("_id", "", "Project Id", "_idUp")}
+            {this.renderInput("title", "", "Title  (optional)", "titleUp")}
+            {this.renderInput("text", "", "Description  (optional)", "textUp")}
+            {this.renderInput(
+              "createdby",
+              "",
+              "Created By  (optional)",
+              "createdbyUp"
+            )}
+            {this.renderInput(
+              "assignedto",
+              "",
+              "Assigned To (optional)",
+              "assignedtoUp"
+            )}
+            {this.renderInput("status", "", "Status (optional)", "statusUp")}
 
-          {this.renderCheckbox("state", "Check to close issue.", ["closed"])}
+            {this.renderCheckbox("state", "Check to close issue.", ["closed"])}
 
-          {this.renderButton("Update")}
-        </form>
+            {this.renderButton("Update")}
+          </form>
+        </div>
       </div>
     );
   }
